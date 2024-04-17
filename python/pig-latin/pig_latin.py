@@ -10,7 +10,7 @@ Rule 4: If a word contains a "y" after a consonant cluster or as the second lett
     import re
     vowel_match = re.match(r'^([AaEeIiOoUu])|(Xr|XR|xr)|(YT|Yt|yt)', text)
     single_consonent_match = re.match(r'^([^AaEeIiOoUu])', text)
-    double_consonent_match = re.match(r'^(CH|Ch|ch)|(SH|Sh|sh)|(TR|Tr|tr)|(TW|Tw|tw)')
+    double_consonent_match = re.match(r'^(CH|Ch|ch)|(SH|Sh|sh)|(TR|Tr|tr)|(TW|Tw|tw)', text)
     # print(vowel_match, vowel_match[0], vowel_match[1], vowel_match[2], vowel_match[3])
     # Rule 1: vowel sound
     if vowel_match:
