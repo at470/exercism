@@ -1,9 +1,27 @@
+import re
 def is_valid(isbn):
-    pass
+    # remove hyphen
+    no_hyphen_isbn_input = re.sub(r'-', '', isbn)
+    is_isbn = False
 
-    """
-    The ISBN-10 format is 9 digits (0 to 9) plus one check character (either a digit or an X only). In the case the check character is an X, this represents the value '10'. These may be communicated with or without hyphens, and can be checked for their validity by the following formula:
-
-(d₁ * 10 + d₂ * 9 + d₃ * 8 + d₄ * 7 + d₅ * 6 + d₆ * 5 + d₇ * 4 + d₈ * 3 + d₉ * 2 + d₁₀ * 1) mod 11 == 0
-If the result is 0, then it is a valid ISBN-10, otherwise it is invalid.
-    """
+    if len(no_hyphen_isbn_input) != 10:
+        # raise ValueError("Not valid")
+        return is_isbn
+    
+    elif re.match(r'([0-9]{10})|([0-9]{9}[Xx]{1}$)', no_hyphen_isbn_input):
+        cleaned_string = re.match(r'([0-9]{10})|([0-9]{9}[Xx]{1}$)', no_hyphen_isbn_input)[0]
+        counter = 10
+        result = 0
+        for index, num in enumerate(cleaned_string):
+            if index == 9 and num == 'X':
+                # something with 10
+                print(10)
+                result = int(result) + 10
+            else:
+                result = int(result) + counter * int(num)
+                counter -= 1
+        
+        if result % 11 == 0:
+            is_isbn = True
+    return is_isbn
+    
