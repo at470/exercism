@@ -33,6 +33,7 @@ def classify(number):
 
     number_classification = ''
     if aliquot_sum == 1:
+        # prime numbers are deficient
         number_classification = 'deficient'
     elif number == aliquot_sum:
         number_classification = 'perfect'
