@@ -11,25 +11,22 @@ def classify(number):
     check_num = 2
     loop_count = 1
     factors_dict = {1:True}
-    check_num_pair = number // check_num
+  
 
-    # check between 1 and number-1
     while check_num in range(2, number):
-        # if already_checked[check_num] is True:
         if check_num in factors_dict.keys():
             # print('already checked')
-            pass
+            break
         else:
             if number % check_num == 0:
                 # print('checking')
+                check_num_pair = number // check_num
                 factors_dict[check_num] = True
                 factors_dict[check_num_pair] = True
                 loop_count += 1
         check_num += 1
 
     aliquot_sum = sum(factors_dict.keys())
-    print(aliquot_sum)
-    # print(factors_dict, loop_count)
 
     number_classification = ''
     if aliquot_sum == 1:
@@ -42,8 +39,6 @@ def classify(number):
     else:
         number_classification = 'deficient'
     return number_classification
-
-
 
 
 
