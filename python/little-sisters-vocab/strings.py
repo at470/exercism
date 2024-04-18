@@ -1,5 +1,5 @@
 """Functions for creating, transforming, and adding prefixes to strings."""
-
+import re
 
 def add_prefix_un(word):
     return 'un' + word
@@ -26,7 +26,7 @@ def make_word_groups(vocab_words):
         if index == 0:
             word_groups = characters
         else:
-            word_groups = word_groups + " :: " + prefix + characters
+            word_groups = word_groups + ' :: ' + prefix + characters
     return word_groups
 
 
@@ -53,5 +53,7 @@ def adjective_to_verb(sentence, index):
 
     For example, ("It got dark as the sun set.", 2) becomes "darken".
     """
-
-    pass
+    words_in_sentence = re.split(' ', sentence)
+    adj_in_sentence = re.match(r'^[a-zA-Z]+', words_in_sentence[index])
+    adjective = adj_in_sentence[0] + 'en'
+    return adjective
