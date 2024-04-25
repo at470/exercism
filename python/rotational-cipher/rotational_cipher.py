@@ -115,18 +115,17 @@ def rotate(text, key):
     
     shifted_string = ''
     for char in text:
+        if re.match(r'[A-Z]', char):
+            shifted_index = (char_upper_to_index[char] + key) % 26
+            if shifted_index == 0:
+                shifted_index = 26
+            shifted_string = shifted_string + index_to_char_upper[shifted_index]
+        elif re.match(r'[a-z]', char):
+            shifted_index = (char_lower_to_index[char] + key) % 26
+            if shifted_index == 0:
+                shifted_index = 26
+            shifted_string = shifted_string + index_to_char_lower[shifted_index]
         # Ignore non-alphabet
-        if re.match(r'[a-zA-Z]', char):
-            if re.match(r'[A-Z]', char):
-                shifted_index = (char_upper_to_index[char] + key) % 26
-                if shifted_index == 0:
-                    shifted_index = 26
-                shifted_string = shifted_string + index_to_char_upper[shifted_index]
-            else:
-                shifted_index = (char_lower_to_index[char] + key) % 26
-                if shifted_index == 0:
-                    shifted_index = 26
-                shifted_string = shifted_string + index_to_char_lower[shifted_index]
         else:
             shifted_string = shifted_string + char
 
