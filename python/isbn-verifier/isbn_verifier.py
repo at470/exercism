@@ -23,5 +23,5 @@ def is_valid(isbn):
         
         if result % 11 == 0:
             is_isbn = True
-    return is_isbn
     
+    return is_isbn
