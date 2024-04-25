@@ -2,46 +2,46 @@
 
 ## Basics
 
-Guido's Lasagna
+- Guido's Lasagna
 
 ## Numbers
 
-Currency Exchange
-Grains
-Armstrong Numbers
-Collaz Conjecture
+- Currency Exchange
+- Grains
+- Armstrong Numbers
+- Collaz Conjecture
 
 ## Bools
 
-Pacman / Ghost Gobble
-Leap
-Triangle
+- Pacman / Ghost Gobble
+- Leap
+- Triangle
 
 ## Conditionals
 
-Meltdown Mitigation
-Bob
-Raindrops
-Pig Latin - in progress
+- Meltdown Mitigation
+- Bob
+- Raindrops
+- Pig Latin - in progress
 
 ## Strings
 
-Little Sister's Vocabulary
-Pangram
-Isogram
-ISBN Verifier
+- Little Sister's Vocabulary
+- Pangram
+- Isogram
+- ISBN Verifier
 
 ## String Methods
 
-Little Sister's Essay
+- Little Sister's Essay
 
 ## Comparisons
 
-Black Jack
+- Black Jack
 
 ## Lists
 
-Card Games
+- Card Games
 
 ## List Methods
 
