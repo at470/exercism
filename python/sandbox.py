@@ -1,39 +1,15 @@
-# 'm' + 13 -> 'a'
-char_lower_to_index = {'a' : 1,
-              'b' : 2,
-              'c' : 3,
-              'd' : 4,
-              'e' : 5,
-              'f' : 6,
-              'g' : 7,
-              'h' : 8,
-              'i' : 9,
-              'j' : 10,
-              'k' : 11,
-              'l' : 12,
-              'm' : 13,
-              'n' : 14,
-              'o' : 15,
-              'p' : 16,
-              'q' : 17,
-              'r' : 18,
-              's' : 19,
-              't' : 20,
-              'u' : 21,
-              'v' : 22,
-              'w' : 23,
-              'x' : 24,
-              'y' : 25,
-              'z' : 26
-            }
+def approx_average_is_average(hand):
+    """Return if the (average of first and last card values) OR ('middle' card) == calculated average.
 
-x = 'm'
-shift = 14
+    :param hand: list - cards in hand.
+    :return: bool - does one of the approximate averages equal the `true average`?
+    """
 
-original_index = char_lower_to_index[x]
+    last_index = len(hand) - 1
+    middle_index = len(hand) // 2 + 1
 
-print(original_index)
+    median_of_hand = hand[middle_index]
+    avg_first_and_last_card = (hand[0] + hand[last_index])/2
+    calculated_avg = card_average(hand)
 
-new_index = (original_index + shift) % 26
-
-print(new_index)
+    return median_of_hand == calculated_avg or avg_first_and_last_card == calculated_avg

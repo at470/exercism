@@ -40,10 +40,14 @@
 - Black Jack
 - Darts
 - Perfect Numbers
+- Sublist
+- All Your Base
 
 ## Lists
 
 - Card Games
+- Resistor Colour
+- Resistor Colour Duo
 
 ## List Methods
 
