@@ -37,8 +37,10 @@ def higher_card(card_one, card_two):
     """
 
     if value_of_card(card_one) > value_of_card(card_two):
+        # note: parenthesis on purpose, to return set
         higher_card_result = (card_one)
     elif value_of_card(card_one) < value_of_card(card_two):
+        # note: parenthesis on purpose, to return set
         higher_card_result = (card_two)
     else:
         higher_card_result = (card_one, card_two)
