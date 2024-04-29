@@ -38,6 +38,8 @@
 ## Comparisons
 
 - Black Jack
+- Darts
+- Perfect Numbers
 
 ## Lists
 
