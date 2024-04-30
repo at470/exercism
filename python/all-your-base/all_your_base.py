@@ -34,33 +34,24 @@ def rebase(input_base, digits, output_base):
         else:
             raise ValueError("all digits must satisfy 0 <= d < input base")
 
+    # add conditional to handle returning empty list
     if sum(result_in_base_ten) == []:
         number_in_base_ten = [0]
     else:
         number_in_base_ten = sum(result_in_base_ten)
 
-    print(result_in_base_ten, number_in_base_ten)
-
-    x = number_in_base_ten
+    number_being_divided_in_base_ten = number_in_base_ten
     result_in_output_base = []
 
-    while x > 0:
-        div, mod = divmod(x, output_base)
+    while number_being_divided_in_base_ten > 0:
+        div, mod = divmod(number_being_divided_in_base_ten, output_base)
         result_in_output_base.append(mod)
-        x = div
+        number_being_divided_in_base_ten = div
 
     result_in_output_base.reverse()
-
+    
+    # add conditional to handle returning empty list
     if result_in_output_base == []:
         return [0]
     else:
         return result_in_output_base
-
-
-input_base = 2
-digits = [0]
-output_base = 10
-
-x = rebase(input_base, digits, output_base)
-
-print(x)
