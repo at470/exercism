@@ -50,6 +50,7 @@
 - Resistor Colour Duo
 
 ## List Methods
+- Chaitana's Colossal Coaster
 
 ## Loops
 

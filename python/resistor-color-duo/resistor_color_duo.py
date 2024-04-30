@@ -12,6 +12,7 @@ def value(colors):
         'white' : '9'
         }
     
+    # only take the first two values of colors
     value = int(colour_number_lookup[colors[0]] + colour_number_lookup[colors[1]])
     
     return value
