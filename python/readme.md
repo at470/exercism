@@ -22,7 +22,7 @@
 - Meltdown Mitigation
 - Bob
 - Raindrops
-- Pig Latin - in progress
+- Pig Latin - in progress, fiddly
 
 ## Strings
 
@@ -41,7 +41,7 @@
 - Darts
 - Perfect Numbers
 - Sublist
-- All Your Base
+- All Your Base - more challenging
 
 ## Lists
 
@@ -52,6 +52,8 @@
 
 ## List Methods
 - Chaitana's Colossal Coaster
+- Resistor Colour Trio
+- Resistor Expert
 
 ## Loops
 
