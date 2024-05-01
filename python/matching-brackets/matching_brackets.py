@@ -26,14 +26,6 @@ def is_paired(input_string):
             if len(stack) > 0 and bracket_pairs[char] == stack[-1]:
                 stack.pop()
             else:
-                mismatch_flag += 1
-    # if mismatch_flag > 0 there's been a mismatch
-    if mismatch_flag > 0:
-        is_paired_result = False
-
-    else:
-        if stack == []:
-            is_paired_result = True
-    
-    return is_paired_result
-
+                return False
+            
+    return stack == []
