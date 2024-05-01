@@ -56,6 +56,7 @@
 - Resistor Expert
 
 ## Loops
+- Making The Grade
 
 ## Tuples
 
