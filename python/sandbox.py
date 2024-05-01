@@ -1,14 +1,29 @@
-def square_root(number):
-    if number == 1:
-        return 1
-    
-    step = 1
-    count = 0
-    while number > 0:
-        print(number)
-        number = number - count
-        count+= 1
-        step = step + 2
-    return count
+input_string = '[]]'
 
-number = 25
+input_string_list = []
+for char in input_string:
+    input_string_list.append(char)
+
+stack = []
+bracket_pairs = {
+    '(' : ')',
+    ')' : '(',
+    '{' : '}',
+    '}' : '{',
+    '[' : ']',
+    ']' : '['
+}
+
+for index, char in enumerate(input_string_list):
+    if char in ('{', '(', '['):
+        stack.append(char)
+    if char in ('}', ')', ']'):
+        if len(stack) > 0 and bracket_pairs[char] == stack[-1]:
+            stack.pop()
+        else:
+            break
+
+if stack == []:
+    print('all matching')
+else:
+    print('not matching')
