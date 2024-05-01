@@ -10,6 +10,7 @@
 - Grains
 - Armstrong Numbers
 - Collaz Conjecture
+- Square Root - cheated a little with an assumption, would love to implement the long division method!
 
 ## Bools
 
@@ -23,6 +24,7 @@
 - Bob
 - Raindrops
 - Pig Latin - in progress, fiddly
+- Matching Brackets
 
 ## Strings
 
@@ -34,6 +36,9 @@
 ## String Methods
 
 - Little Sister's Essay
+- RNA Transcriptions
+- Wordy
+- Atbash Cipher
 
 ## Comparisons
 
@@ -41,24 +46,34 @@
 - Darts
 - Perfect Numbers
 - Sublist
-- All Your Base - more challenging, with thanks to https://www.inchcalculator.com/base-converter/
+- All Your Base - medium - more challenging, with thanks to https://www.inchcalculator.com/base-converter/
 
 ## Lists
 
 - Card Games
 - Resistor Colour
 - Resistor Colour Duo
+- Diamond
+- Minesweeper - medium
 
 
 ## List Methods
 - Chaitana's Colossal Coaster
 - Resistor Colour Trio
 - Resistor Expert
+- Secret Handshake
+- Anagram
+- Variable Length Quantity - medium
 
 ## Loops
 - Making The Grade
+- Binary Search
+- Eliud's Eggs
+- OCR Numbers
+- Change - medium
 
 ## Tuples
+- Tisbury Treasure Hunt
 
 ## Dicts
 
