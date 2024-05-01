@@ -41,7 +41,7 @@
 - Darts
 - Perfect Numbers
 - Sublist
-- All Your Base - more challenging
+- All Your Base - more challenging, with thanks to https://www.inchcalculator.com/base-converter/
 
 ## Lists
 
