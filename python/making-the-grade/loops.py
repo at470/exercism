@@ -33,11 +33,11 @@ def above_threshold(student_scores, threshold):
     :param threshold: int - threshold to cross to be the "best" score.
     :return: list - of integer scores that are at or above the "best" threshold.
     """
-    above_threshold = []
+    above_threshold_list = []
     for score in student_scores:
         if score >= threshold:
-            above_threshold.append(score)
-    return above_threshold
+            above_threshold_list.append(score)
+    return above_threshold_list
 
 
 def letter_grades(highest):
@@ -73,13 +73,13 @@ def student_ranking(student_scores, student_names):
     :param student_names: list - of string names by exam score in descending order.
     :return: list - of strings in format ["<rank>. <student name>: <score>"].
     """
-    student_ranking =[]
+    student_ranking_list =[]
     count = 1
     for index, score in enumerate(student_scores):
-        student_rank_name_grade_str = str(count) + '. ' + student_names[index] + ": " + str(score)
-        student_ranking.append(student_rank_name_grade_str)
+        student_rank_name_grade_str = str(count) + '. ' + student_names[index] + ': '+ str(score)
+        student_ranking_list.append(student_rank_name_grade_str)
         count+=1
-    return student_ranking
+    return student_ranking_list
 
 
 def perfect_score(student_info):
@@ -88,9 +88,9 @@ def perfect_score(student_info):
     :param student_info: list - of [<student name>, <score>] lists.
     :return: list - first `[<student name>, 100]` or `[]` if no student score of 100 is found.
     """
-    perfect_score = []
+    perfect_score_list = []
     for name_score in student_info:
         if name_score[1] == 100:
-            perfect_score = name_score
+            perfect_score_list = name_score
             break
-    return perfect_score
+    return perfect_score_list
