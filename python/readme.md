@@ -67,7 +67,7 @@
 
 ## Loops
 - Making The Grade
-- Binary Search
+- Binary Search - fiddly
 - Eliud's Eggs
 - OCR Numbers
 - Change - medium
