@@ -5,17 +5,30 @@ def answer(question):
 
     # Iteration 0 — Numbers
     if re.match(r'^[Ww]hat is \d+\?$', question):
-        value = int(re.findall(r'[\d]+', question)[0]) #use findall(), convert to integer (string by default)
+        answer = re.findall(r'[\d]+', question)
+        value = int(answer[0]) #use findall(), convert to integer (string by default)
 
     # Iteration 1 — Addition
     # Handle large numbers and negative numbers.
     elif re.match(r'^[Ww]hat is -{0,1}\d+ plus -{0,1}\d+\?$', question):
         answer = re.findall(r'-{0,1}\d+', question)
-        value = 0
-        for number in answer:
-            value = value + int(number)
+        value = int(answer[0]) + int(answer[1])
 
+    # Iteration 2 — Subtraction, Multiplication and Division
+    # A - Subtraction
+    elif re.match(r'^[Ww]hat is -{0,1}\d+ minus -{0,1}\d+\?$', question):
+        answer = re.findall(r'-{0,1}\d+', question)
+        value = int(answer[0]) - int(answer[1])
+    
+    # B - Multiplication
+    elif re.match(r'^[Ww]hat is -{0,1}\d+ multiplied by -{0,1}\d+\?$', question):
+        answer = re.findall(r'-{0,1}\d+', question)
+        value = int(answer[0]) * int(answer[1])
 
+    # C - Division
+    elif re.match(r'^[Ww]hat is -{0,1}\d+ divided by -{0,1}\d+\?$', question):
+        answer = re.findall(r'-{0,1}\d+', question)
+        value = int(answer[0]) // int(answer[1])
     else:
         raise ValueError("unknown operation")
         raise ValueError("syntax error")

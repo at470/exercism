@@ -37,7 +37,7 @@
 
 - Little Sister's Essay
 - RNA Transcriptions
-- Wordy
+- Wordy - DIFFICULT!
 - Atbash Cipher
 
 ## Comparisons
