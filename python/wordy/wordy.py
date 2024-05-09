@@ -1,6 +1,4 @@
 def answer(question):
-
-
     import re
 
     # Iteration 0 — Numbers
