@@ -62,6 +62,9 @@ def clean_up(combined_record_group):
     
     for outer_tuple in combined_record_group:
         for i in outer_tuple:
-            report = report + i + '\n'
+            if len(i) == 2 and type(i) == 'str':
+                pass
+            else:
+                report = report + str(i) + '\n'
         
-    return clean_string
+    return report
