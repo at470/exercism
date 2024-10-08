@@ -58,13 +58,14 @@ def clean_up(combined_record_group):
     ('Vintage Pirate Hat', '7E', 'Quiet Inlet (Island of Mystery)', ('7', 'E'), 'Orange'), 
     ('Crystal Crab', '6A', 'Old Schooner', ('6', 'A'), 'Purple'))
     """
-    report = ''
-    
+    result_str = ''
+
     for outer_tuple in combined_record_group:
+        result_list = []
         for i in outer_tuple:
-            if len(i) == 2 and type(i) == 'str':
+            if len(i) == 2 and type(i) is str:
                 pass
             else:
-                report = report + str(i) + '\n'
-        
-    return report
+                result_list.append(i)
+        result_str = result_str + str(tuple(result_list)) + '\n'
+    return result_str
