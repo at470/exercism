@@ -74,8 +74,18 @@
 
 ## Tuples
 - Tisbury Treasure Hunt
+- Twelve Days
+- Roman Numerals
+- Tournament - medium
+- Food Chain - medium
+- Dominoes - medium
 
 ## Dicts
+- Inventory Management
+- ETL
+- Space Age
+- Word Count
+- Forth - medium
 
 ## Dict Methods
 
