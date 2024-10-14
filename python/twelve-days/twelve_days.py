@@ -1,3 +1,5 @@
+# the untidy version!
+
 def initialise_gift_variable(start_verse):
     gift_dict = {1 : 'and a Partridge in a Pear Tree',
                 2 : 'two Turtle Doves, ',
@@ -19,8 +21,6 @@ def initialise_gift_variable(start_verse):
         loop_counter += 1
     return gifts_list_string
 
-def create_verse():
-    
 def recite(start_verse, end_verse):
     returned_lyrics = []
     verse_dict = {1 : 'first',
@@ -61,6 +61,7 @@ def recite(start_verse, end_verse):
     # when returning one verse only, not first verse
     elif start_verse - end_verse == 0:
     # construct initial value of gifts
+        list_of_gifts = initialise_gift_variable(start_verse)
         verse = f'On the {verse_dict[start_verse]} day of Christmas my true love gave to me: {list_of_gifts}.'
         returned_lyrics.append(verse)
     # multiple verses, *not* starting first verse
@@ -91,4 +92,3 @@ def recite(start_verse, end_verse):
             else:
                 list_of_gifts_from_second_verse = gift_dict[loop_count] + list_of_gifts_from_second_verse
     return returned_lyrics
-
